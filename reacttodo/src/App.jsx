@@ -2,6 +2,7 @@
 // TODO: Apply DaisyUI
 
 import React, { useState } from "react";
+import '../src/index.css';
 
 function App() {
   const [newItem, setNewItem] = useState("");
@@ -43,10 +44,10 @@ function App() {
       <ol>
         {list.map((listItem, i) => {
           return (
-            <li key={i}>
-              {listItem} &nbsp;{" "}
+              <li key={i} contentEditable className="todo">
+                {listItem} &nbsp;{" "}
               <button onClick={() => removeTask(i)}>❌</button>
-            </li>
+              </li>
           );
         })}
       </ol>
