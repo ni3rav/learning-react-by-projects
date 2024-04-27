@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useState } from "react";
+import { ThemeContextProvider } from "./context/Context";
+import Display from "./components/Display";
+import ToggleButton from "./components/ToggleButton";
 
 function App() {
-  return (
-   <>
-    
-   </>
-  )
+  return (<ThemeContextProvider>
+      <Display />
+      <ToggleButton />
+  </ThemeContextProvider>)
 }
 
-export default App
+export default App;
